@@ -23,11 +23,25 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Store the background task
+background_task = None
+
 # Start the random number generator
 @app.on_event("startup")
 async def startup_event():
     await create_tables()  # Ensure tables exist
-    asyncio.create_task(start_random_number_generator())
+    global background_task
+    background_task = asyncio.create_task(start_random_number_generator())
+
+# Shutdown handler to cancel the background task
+@app.on_event("shutdown")
+async def shutdown_event():
+    if background_task:
+        background_task.cancel()
+        try:
+            await background_task
+        except asyncio.CancelledError:
+            print("Background task cancelled.")
 
 # Login endpoint
 @app.post("/login", response_model=LoginResponse)

@@ -95,7 +95,15 @@ This project is a full-stack application that includes a backend built with **Py
     ```bash
     npm install
     ```
-3. Start the development server:
+3. Set up environment variables:
+    Make a .env file in the root directory of backend with following content:
+
+    ```bash
+    VITE_APP_BACKEND_URL=your-backend-url
+    VITE_APP_WEB_SOCKET_URL=your-frontend-url
+    ```
+
+4. Start the development server:
     ```bash
     npm run dev
     ```
@@ -130,8 +138,7 @@ This project is a full-stack application that includes a backend built with **Py
 
 ## Hosted Links
 
-- Backend: 
-- Frontend:
+- Website: https://blackrose-d222.vercel.app
 
 ---
 
