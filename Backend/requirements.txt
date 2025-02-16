@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+aiomysql
+python-dotenv
+python-jose[cryptography]
+websockets
+filelock
+pydantic
