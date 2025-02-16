@@ -9,9 +9,7 @@ This project is a full-stack application that includes a backend built with **Py
 2. [Tech Stack](#tech-stack)
 3. [Setup Instructions](#setup-instructions)
 4. [Testing Steps](#testing-steps)
-5. [Deployment](#deployment)
-6. [Hosted Links](#hosted-links)
-7. [Documentation](#documentation)
+5. [Hosted Links](#hosted-links)
 
 ---
 
